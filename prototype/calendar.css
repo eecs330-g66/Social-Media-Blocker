@@ -31,3 +31,7 @@ body {
 	display: grid;
     grid-template-columns: auto auto auto;
 }
+
+#graph {
+	fill: black;
+}
