@@ -78,3 +78,17 @@ tr:nth-child(even) {
     margin-right: 280px;
     padding: 7.5px;
 }
+
+
+select {
+	font-family: Avenir, sans-serif;
+}
+
+.timeform {
+	width: 250px;
+	padding-left: 25px;
+}
+
+h2 {
+	margin-bottom: -5px;
+}
