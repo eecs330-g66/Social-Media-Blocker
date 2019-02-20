@@ -70,5 +70,11 @@ tr:nth-child(even) {
 .addbutton {
 	position: relative;
 	text-align: center;
+	margin-top: 15px;
 
+}
+
+.back-button {
+    margin-right: 280px;
+    padding: 7.5px;
 }
