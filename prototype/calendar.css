@@ -35,3 +35,9 @@ body {
 #graph {
 	fill: black;
 }
+
+.addbutton {
+	position: relative;
+	text-align: center;
+
+}
