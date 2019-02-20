@@ -15,6 +15,37 @@ body {
 	position: relative;
 }
 
+h1 {
+	text-align: center;
+	height: 40px;
+	width: 100%;
+	background-color: lightblue;
+}
+
+/*Calendar Div*/
+.calendar{
+
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  position: relative;
+  left: 10px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/*Bottom Bar for Navigation*/
 .nav-bar {
 	height: 80px;
 	width: 300px;
