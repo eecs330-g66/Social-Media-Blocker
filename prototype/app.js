@@ -16,10 +16,16 @@ function init() {
 
 function store() {
 	//localStorage['length'] = document.getElemntById('end_hour').value - document.getElementById('start_hour').value;
-	localStorage['start_day'] = document.getElementById('start_day').value;
-	localStorage['start_hour'] = document.getElementById('start_hour').value;
-	localStorage['end_day'] = document.getElementById('end_day').value;
-	localStorage['end_hour'] = document.getElementById('end_hour').value;
+	if (document.getElementById('cbox0').checked || document.getElementById('cbox1').checked || document.getElementById('cbox2').checked) {
+		localStorage['start_day'] = document.getElementById('start_day').value;
+		localStorage['start_hour'] = document.getElementById('start_hour').value;
+		localStorage['end_day'] = document.getElementById('end_day').value;
+		localStorage['end_hour'] = document.getElementById('end_hour').value;
+		window.location.href = "calendar.html";
+	}
+	else {
+		alert("Please check a social media");
+	}
 }
 
 init();
