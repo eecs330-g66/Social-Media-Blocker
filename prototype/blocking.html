@@ -10,7 +10,7 @@
           <h1><div class="back-button"><a href="calendar.html"><i class="material-icons">arrow_back</i></a></div></h1>
               <div class="timeform">
                 <h2>Start:</h2>
-                  <select>
+                  <select id="start_day">
                   <option value="mon">Monday</option>
                   <option value="tues">Tuesday</option>
                   <option value="wed">Wednesday</option>
@@ -19,7 +19,7 @@
                   <option value="sat">Saturday</option>
                   <option value="sun">Sunday</option>
                 </select>
-                <select>
+                <select id="start_hour">
                   <option value="8">8:00</option>
                   <option value="9">9:00</option>
                   <option value="10">10:00</option>
@@ -30,7 +30,7 @@
                   <option value="15">15:00</option>
                 </select>
                 <h2>End:</h2>
-                  <select>
+                  <select id="end_day">
                   <option value="mon">Monday</option>
                   <option value="tues">Tuesday</option>
                   <option value="wed">Wednesday</option>
@@ -39,7 +39,7 @@
                   <option value="sat">Saturday</option>
                   <option value="sun">Sunday</option>
                 </select>
-                <select>
+                <select id="end_hour">
                   <option value="8">8:00</option>
                   <option value="9">9:00</option>
                   <option value="10">10:00</option>
@@ -75,10 +75,9 @@
                   <span class="slider round"></span>
                 </label>
               </div>
-              <a href="calendar.html">
               <div class ="addbutton">
-              <input type="image" src="images/savebutton.svg" width="150" height="40">
-              </input></a>
+              <input type="image" src="images/savebutton.svg" onclick="store()" width="150" height="40">
+              </input>
             </div>
 
               <div class="nav-bar">
