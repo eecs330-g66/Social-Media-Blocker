@@ -17,7 +17,7 @@ body {
 
 h1 {
 	text-align: center;
-	height: 40px;
+	height: 45px;
 	width: 100%;
 	background-color: lightblue;
 }
@@ -74,7 +74,7 @@ tr:nth-child(even) {
 .addbutton {
 	position: relative;
 	text-align: center;
-	margin-top: 15px;
+	bottom: -15px;
 
 }
 
@@ -91,6 +91,7 @@ select {
 .timeform {
 	width: 250px;
 	padding-left: 25px;
+	margin-bottom: 30px;
 }
 
 h2 {
@@ -99,7 +100,6 @@ h2 {
 
 .switch {
   position: relative;
-  display: inline-block;
   width: 60px;
   height: 34px;
 }
@@ -175,4 +175,14 @@ input:checked + .slider:before {
   height:20px;
   width:35%;
   border:1px solid red;
+}
+
+.applist {
+	width: 250px;
+	height: 40px;
+	margin-left: 25px;
+	display: flex;
+	display: grid;
+  grid-gap: 0 150px;
+  grid-template-columns: auto auto;
 }
