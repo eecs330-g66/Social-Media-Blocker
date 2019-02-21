@@ -27,7 +27,7 @@ function store() {
 		window.location.href = "calendar.html";
 	}
 	else {
-		alert("Please check a social media");
+		alert("Please select a social media app to block");
 	}
 }
 
