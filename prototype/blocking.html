@@ -7,8 +7,79 @@
     </head>
     <body>
         <div id="screen">
-          <h1>Blocking</h1>
-              <div class="back-button"><a href="calendar.html"><i class="material-icons">arrow_back</i></a></div>
+          <h1><div class="back-button"><a href="calendar.html"><i class="material-icons">arrow_back</i></a></div></h1>
+              <div class="timeform">
+                <h2>Start:</h2>
+                  <select id="start_day">
+                  <option value="mon">Monday</option>
+                  <option value="tues">Tuesday</option>
+                  <option value="wed">Wednesday</option>
+                  <option value="thu">Thursday</option>
+                  <option value="fri">Friday</option>
+                  <option value="sat">Saturday</option>
+                  <option value="sun">Sunday</option>
+                </select>
+                <select id="start_hour">
+                  <option value="8">8:00</option>
+                  <option value="9">9:00</option>
+                  <option value="10">10:00</option>
+                  <option value="11">11:00</option>
+                  <option value="12">12:00</option>
+                  <option value="13">13:00</option>
+                  <option value="14">14:00</option>
+                  <option value="15">15:00</option>
+                </select>
+                <h2>End:</h2>
+                  <select id="end_day">
+                  <option value="mon">Monday</option>
+                  <option value="tues">Tuesday</option>
+                  <option value="wed">Wednesday</option>
+                  <option value="thu">Thursday</option>
+                  <option value="fri">Friday</option>
+                  <option value="sat">Saturday</option>
+                  <option value="sun">Sunday</option>
+                </select>
+                <select id="end_hour">
+                  <option value="8">8:00</option>
+                  <option value="9">9:00</option>
+                  <option value="10">10:00</option>
+                  <option value="11">11:00</option>
+                  <option value="12">12:00</option>
+                  <option value="13">13:00</option>
+                  <option value="14">14:00</option>
+                  <option value="15">15:00</option>
+                </select>
+              </div>
+              <hr>
+              <div class = applist>
+                <img src="images/512.png" width="40" height="40" alt="graph">
+                <label class="switch">
+                  <input type="checkbox" id="cbox0">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+
+              <hr>
+              <div class = applist>
+                <img src="images/513.png" width="40" height="40" alt="graph">
+                <label class="switch">
+                  <input type="checkbox" id="cbox1">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <hr>
+              <div class = applist>
+                <img src="images/download.png" width="40" height="40" alt="graph">
+                <label class="switch">
+                  <input type="checkbox" id="cbox2">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class ="addbutton">
+              <input type="image" src="images/savebutton.svg" onclick="store()" width="150" height="40">
+              </input>
+            </div>
+
               <div class="nav-bar">
                   <div class="icons-wrapper">
                     <a href="graph.html"><img src="images/1170667.svg" width="50" height="50" alt="graph"></a>
@@ -18,6 +89,7 @@
               </div>
         </div>
    </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="app.js"></script>
 </html>
 
