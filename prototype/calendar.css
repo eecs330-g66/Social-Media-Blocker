@@ -24,7 +24,8 @@ h1 {
 
 /*Calendar Div*/
 .calendar{
-    
+	margin-right: 10px;
+	margin-left: 10px;
     height: 300px;
     width: 280px;
     overflow: scroll;
@@ -36,7 +37,6 @@ table {
   border-collapse: collapse;
   width: 90%;
   position: relative;
-  left: 15px;
 }
 
 td, th {
