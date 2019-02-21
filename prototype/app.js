@@ -10,7 +10,7 @@ function init() {
 	var end_day = localStorage.getItem('end_day');
 	var end_hour = Number(localStorage.getItem('end_hour'));
 	for (var i = start_hour; i < end_hour; i++) {
-		document.getElementById(start_day+i.toString()).style.backgroundColor = 'blue';
+		document.getElementById(start_day+i.toString()).style.backgroundColor = "#2196f3";
 	}
 }
 
