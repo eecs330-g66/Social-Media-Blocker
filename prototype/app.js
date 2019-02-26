@@ -12,6 +12,7 @@ function init() {
 	var start_hour = Number(localStorage.getItem('start_hour'));
 	var end_day = localStorage.getItem('end_day');
 	var end_hour = Number(localStorage.getItem('end_hour'));
+
     
 
     //Finding the index of start_day and end_day in days array.
@@ -113,12 +114,22 @@ function init() {
 
 
 
+
 function store() {
 	//localStorage['length'] = document.getElemntById('end_hour').value - document.getElementById('start_hour').value;
-	localStorage['start_day'] = document.getElementById('start_day').value;
-	localStorage['start_hour'] = document.getElementById('start_hour').value;
-	localStorage['end_day'] = document.getElementById('end_day').value;
-	localStorage['end_hour'] = document.getElementById('end_hour').value;
+	if ((document.getElementById('start_day').value + document.getElementById('start_hour').value) == (document.getElementById('end_day').value + document.getElementById('end_hour').value)) {
+		alert("Please enter a valid timeframe");
+	}
+	else if (document.getElementById('cbox0').checked || document.getElementById('cbox1').checked || document.getElementById('cbox2').checked) {
+		localStorage['start_day'] = document.getElementById('start_day').value;
+		localStorage['start_hour'] = document.getElementById('start_hour').value;
+		localStorage['end_day'] = document.getElementById('end_day').value;
+		localStorage['end_hour'] = document.getElementById('end_hour').value;
+		window.location.href = "calendar.html";
+	}
+	else {
+		alert("Please select a social media app to block");
+	}
 }
 
 init();
