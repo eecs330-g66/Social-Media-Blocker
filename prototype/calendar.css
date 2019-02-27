@@ -237,3 +237,8 @@ input:checked + .slider:before {
 .dot:hover {
   stroke: rgba(68, 127, 255, 0.3);
 }
+
+.graphbuttons {
+  display: flex;
+  margin-left: 80px;
+}
