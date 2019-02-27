@@ -1,10 +1,16 @@
-<!DOCTYPE HTML>
 <html>
-<head>  
+    <head>
+        <title>Homepage</title>
+        <link rel="stylesheet" type="text/css" href="calendar.css"/>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </head>
+    <body>
+        <div id="screen">
+          <h1>My Usage</h1>
 <script>
 window.onload = function () {
 
-var chart = new CanvasJS.Chart("chartContainer", {
+var chart = new CanvasJS.Chart("barchartContainer", {
 	animationEnabled: true,
 	
 	axisX: {
@@ -99,9 +105,20 @@ function toolTipContent(e) {
 
 }
 </script>
-</head>
-<body>
-<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-</body>
+<div class="graphbuttons">
+                <img src="images/bar.svg" width="60" height="40" alt="addblock">
+                <img src="images/line.svg" width="60" height="40" alt="addblock">
+</div>
+
+<div id="barchartContainer"></div>
+              <div class="nav-bar">
+                  <div class="icons-wrapper">
+                    <a href="graph.html"><img src="images/1170668.svg" id="graph" width="50" height="50" alt="graph"></a>
+                    <a href="calendar.html"><img src="images/4430.svg" width="50" height="50" alt="Cal"></a>
+                    <a href="user.html"><img src="images/33308.svg" width="50" height="50" alt="user"></a>
+                  </div>
+              </div>
+        </div>
+   </body>
 </html>
+

@@ -196,3 +196,9 @@ input:checked + .slider:before {
   position: relative;
   left: 5px; 
 }
+
+#barchartContainer {
+  height: 370px; 
+  max-width: 920px; 
+  margin: 0px auto;
+}
