@@ -207,3 +207,7 @@ input:checked + .slider:before {
   max-width: 920px; 
   margin: 0px auto;
 }
+
+.profilepic {
+  text-align: center;
+}
