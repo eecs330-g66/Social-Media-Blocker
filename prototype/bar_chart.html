@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	axisX: {
+		interval: 1,
+		intervalType: "day",
+        valueFormatString: "DDD"
+	},
+	axisY:{
+      stripLines:[
+			{   
+              
+                label: "Daily Limit",
+                labelPlacement:"outside",
+                thickness:4,
+				value: 13,
+                showOnTop: true,
+                
+			}
+			],
+		valueFormatString:"#0",
+		gridColor: "#B6B1A8",
+		tickColor: "#B6B1A8"
+      
+	},
+	toolTip: {
+		shared: true,
+		content: toolTipContent
+	},
+	data: [{
+		type: "stackedColumn",
+		showInLegend: true,
+		color: "#E4405F",
+		name: "Instagram",
+		dataPoints: [
+      { x: new Date(2019, 01, 03), y: 3},
+      { x: new Date(2019, 01, 04), y: 5},
+      { x: new Date(2019, 01, 05), y: 2},
+      { x: new Date(2019, 01, 06), y: 3},
+      { x: new Date(2019, 01, 07), y: 4},
+      { x: new Date(2019, 01, 08), y: 5},
+      { x: new Date(2019, 01, 09), y: 4}
+    ]
+		},
+		{        
+			type: "stackedColumn",
+			showInLegend: true,
+			name: "Facebook",
+			color: "#0E15F1",
+			dataPoints: [
+      { x: new Date(2019, 01, 03), y: 2},
+      { x: new Date(2019, 01, 04), y: 6},
+      { x: new Date(2019, 01, 05), y: 3},
+      { x: new Date(2019, 01, 06), y: 3},
+      { x: new Date(2019, 01, 07), y: 5},
+      { x: new Date(2019, 01, 08), y: 2},
+      { x: new Date(2019, 01, 09), y: 3}
+    ]
+		},
+		
+		{        
+			type: "stackedColumn",
+			showInLegend: true,
+			name: "Twitter",
+			color: "#46C5E8",
+			dataPoints: [
+      { x: new Date(2019, 01, 03), y: 2},
+      { x: new Date(2019, 01, 04), y: 3},
+      { x: new Date(2019, 01, 05), y: 1},
+      { x: new Date(2019, 01, 06), y: 5},
+      { x: new Date(2019, 01, 07), y: 4},
+      { x: new Date(2019, 01, 08), y: 6},
+      { x: new Date(2019, 01, 09), y: 7}
+    ]
+	}]
+});
+chart.render();
+
+function toolTipContent(e) {
+	var str = "";
+	var total = 0;
+	var str2, str3;
+	for (var i = 0; i < e.entries.length; i++){
+		var  str1 = "<span style= \"color:"+e.entries[i].dataSeries.color + "\"> "+e.entries[i].dataSeries.name+"</span>: <strong>"+e.entries[i].dataPoint.y+"</strong><br/>";
+		total = e.entries[i].dataPoint.y + total;
+		str = str.concat(str1);
+	}
+	str2 = "<span style = \"color:DodgerBlue;\"><strong>"+(e.entries[0].dataPoint.x).getFullYear()+"</strong></span><br/>";
+	total = Math.round(total * 100) / 100;
+	str3 = "<span style = \"color:Tomato\">Total:</span><strong> "+total+"</strong><br/>";
+	return (str2.concat(str)).concat(str3);
+}
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
