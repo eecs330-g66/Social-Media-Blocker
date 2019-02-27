@@ -35,7 +35,7 @@ function init() {
     for (var i = st_day; i <= e_day; i++) {
     	if (start_day == end_day) {
     		for (var j= start_hour; j < end_hour; j++){
-    			document.getElementById(start_day+j.toString()).style.backgroundColor = 'blue';
+    			document.getElementById(start_day+j.toString()).style.backgroundColor = '#2196F3';
     		}
     	}
 
@@ -43,17 +43,17 @@ function init() {
     	else if (start_day !== end_day){
     		if (i == st_day) {
     			for (j=start_hour; j<=22; j++){
-    				document.getElementById(start_day+j.toString()).style.backgroundColor = 'blue';
+    				document.getElementById(start_day+j.toString()).style.backgroundColor = '#2196F3';
     			}
     		}
     		else if (i == e_day){
     			for (j=8; j < end_hour; j++ ) {
-    				document.getElementById(days[e_day]+j.toString()).style.backgroundColor = 'blue';
+    				document.getElementById(days[e_day]+j.toString()).style.backgroundColor = '#2196F3';
     			}
     		}
     		else  {
     			for(j =8; j<= 22; j++) {
-    				document.getElementById(days[i]+j.toString()).style.backgroundColor = 'blue';
+    				document.getElementById(days[i]+j.toString()).style.backgroundColor = '#2196F3';
     			}
     		}         
         }
@@ -68,12 +68,12 @@ function init() {
             for(i = e_day; i>= 0; i--){
                 if (i == e_day){
                  for (j=8; j< end_hour; j++){
-                         document.getElementById(days[i]+j.toString()).style.backgroundColor = 'blue';   
+                         document.getElementById(days[i]+j.toString()).style.backgroundColor = '#2196F3';   
                         }
                 }
                 else {
                     for (j= 8; j<= 22; j++){
-                        document.getElementById(days[i]+j.toString()).style.backgroundColor = 'blue';
+                        document.getElementById(days[i]+j.toString()).style.backgroundColor = '#2196F3';
                     }
                 }
              }
@@ -81,17 +81,17 @@ function init() {
                 for (i = st_day; i < days.length; i++) {
                     if (i == st_day) {
                         for (j = start_hour; j <=22; j++){
-                            document.getElementById(days[i]+j.toString()).style.backgroundColor = 'blue';
+                            document.getElementById(days[i]+j.toString()).style.backgroundColor = '#2196F3';
                         }
                     }
                     else if (i< days.length && i!== st_day){
                          for(j =8; j<= 22; j++) {
-                            document.getElementById(days[i]+j.toString()).style.backgroundColor = 'blue';
+                            document.getElementById(days[i]+j.toString()).style.backgroundColor = '#2196F3';
                          }
                     }
                    if (e_day == 0){
                         for(j= start_hour; j < end_hour; j++){
-                            document.getElementById(days[i]+j.toString()).style.backgroundColor = 'blue';
+                            document.getElementById(days[i]+j.toString()).style.backgroundColor = '#2196F3';
                         }
 
                     }
@@ -135,7 +135,7 @@ function store() {
 init();
 
 function colorboxes() {
-	document.getElementById(start).style.backgroundColor = 'blue';
-	document.getElementById(end).style.backgroundColor = 'blue';
+	document.getElementById(start).style.backgroundColor = '#2196F3';
+	document.getElementById(end).style.backgroundColor = '#2196F3';
 
 }
