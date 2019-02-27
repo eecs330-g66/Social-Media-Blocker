@@ -197,6 +197,13 @@ input:checked + .slider:before {
   left: 5px; 
 }
 
+
 .graphbuttons {
   text-align: center;
+}
+
+#barchartContainer {
+  height: 370px; 
+  max-width: 920px; 
+  margin: 0px auto;
 }
