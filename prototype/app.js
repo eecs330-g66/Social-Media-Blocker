@@ -39,7 +39,6 @@ function init() {
     //Case1: start_day and end_day are the same 
 
     for (var i = st_day; i <= e_day; i++) {
-    				document.getElementById(start_day+j.toString()).style.backgroundColor = '#2196F3';
         if (start_day == end_day) {
             for (var j= start_hour; j < end_hour; j++){
                 document.getElementById(start_day+j.toString()).style.backgroundColor = '#2196F3';
