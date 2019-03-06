@@ -4,7 +4,7 @@ var length;
 var days = ["mon", "tues", "wed", "thu", "fri", "sat", "sun"]; 
 var st_day;
 var e_day;
-var user_input;
+var daily_limit; 
 
 //vars for the login page
 var users = {           //hardcoding 2 users
@@ -159,6 +159,13 @@ function check_login() {
 init();
 
 
+
+function set_limit() {
+    daily_limit = document.getElementById("daily_limit").value; 
+    console.log(daily_limit);
+
+
+}
 
 
 
