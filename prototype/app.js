@@ -14,7 +14,7 @@ var users = {           //hardcoding 2 users
 
 function init() {
     //console.log(user_input);
-    document.getElementById("curr_user").innerHTML = localStorage.getItem('user');
+    document.getElementById("curr_user").innerHTML = 'Welcome, ' + localStorage.getItem('user') + '!';
 
 	var start_day = localStorage.getItem('start_day');
 	var start_hour = Number(localStorage.getItem('start_hour'));
