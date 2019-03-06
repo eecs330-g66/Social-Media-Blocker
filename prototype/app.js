@@ -130,7 +130,6 @@ init();
 function colorboxes() {
 	document.getElementById(start).style.backgroundColor = '#2196F3';
 	document.getElementById(end).style.backgroundColor = '#2196F3';
-
 }
 
 
@@ -140,6 +139,7 @@ function check_login() {
     var password_match = 0;
     var user_input = document.getElementById('user').value.toLowerCase();
     var pwd_input = document.getElementById('pwd').value;
+
     if(user_input in users){
         console.log('Hello');
         user_exists = 1;
