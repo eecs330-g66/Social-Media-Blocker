@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Homepage</title>
+        <link rel="stylesheet" type="text/css" href="calendar.css"/>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </head>
+    <body>
+        <div id="screen">
+          <h1>My Usage</h1>
+<script>
+
+var daily_limit =  5; 
+
+
+window.onload = function () {
+daily_limit = localStorage.getItem('daily_limit');
+
+var chart = new CanvasJS.Chart("barchartContainer", {
+	animationEnabled: true,
+
+	
+	axisX: {
+		interval: 1,
+		intervalType: "day",
+        valueFormatString: "DDD"
+	},
+	axisY:{
+      stripLines:[
+			{   
+              
+                label: "Daily Limit",
+                labelPlacement:"outside",
+                thickness:4,
+                
+				value: daily_limit,
+				  //output from daily limit button will update this screen. 
+				
+                showOnTop: true,
+                
+			}
+			],
+		valueFormatString:"#0",
+		gridColor: "#B6B1A8",
+		tickColor: "#B6B1A8"
+      
+	},
+	toolTip: {
+		shared: true,
+		content: toolTipContent
+	},
+	data: [{
+		type: "stackedColumn",
+		showInLegend: true,
+		color: "#E4405F",
+		name: "Instagram",
+		dataPoints: [
+      { x: new Date(2019, 01, 03), y: 3},
+      { x: new Date(2019, 01, 04), y: 5},
+      { x: new Date(2019, 01, 05), y: 2},
+      { x: new Date(2019, 01, 06), y: 3},
+      { x: new Date(2019, 01, 07), y: 4},
+      { x: new Date(2019, 01, 08), y: 5},
+      { x: new Date(2019, 01, 09), y: 4}
+    ]
+		},
+		{        
+			type: "stackedColumn",
+			showInLegend: true,
+			name: "Facebook",
+			color: "#0E15F1",
+			dataPoints: [
+      { x: new Date(2019, 01, 03), y: 2},
+      { x: new Date(2019, 01, 04), y: 6},
+      { x: new Date(2019, 01, 05), y: 3},
+      { x: new Date(2019, 01, 06), y: 3},
+      { x: new Date(2019, 01, 07), y: 5},
+      { x: new Date(2019, 01, 08), y: 2},
+      { x: new Date(2019, 01, 09), y: 3}
+    ]
+		},
+		
+		{        
+			type: "stackedColumn",
+			showInLegend: true,
+			name: "Twitter",
+			color: "#46C5E8",
+			dataPoints: [
+      { x: new Date(2019, 01, 03), y: 2},
+      { x: new Date(2019, 01, 04), y: 3},
+      { x: new Date(2019, 01, 05), y: 1},
+      { x: new Date(2019, 01, 06), y: 5},
+      { x: new Date(2019, 01, 07), y: 4},
+      { x: new Date(2019, 01, 08), y: 6},
+      { x: new Date(2019, 01, 09), y: 7}
+    ]
+	}]
+});
+chart.render();
+
+function toolTipContent(e) {
+	var str = "";
+	var total = 0;
+	var str2, str3;
+	for (var i = 0; i < e.entries.length; i++){
+		var  str1 = "<span style= \"color:"+e.entries[i].dataSeries.color + "\"> "+e.entries[i].dataSeries.name+"</span>: <strong>"+e.entries[i].dataPoint.y+"</strong><br/>";
+		total = e.entries[i].dataPoint.y + total;
+		str = str.concat(str1);
+	}
+	str2 = "<span style = \"color:DodgerBlue;\"><strong>"+(e.entries[0].dataPoint.x).getFullYear()+"</strong></span><br/>";
+	total = Math.round(total * 100) / 100;
+	str3 = "<span style = \"color:Tomato\">Total:</span><strong> "+total+"</strong><br/>";
+	return (str2.concat(str)).concat(str3);
+}
+
+}
+</script>
+<div class="graphbuttons">
+                <a href="graph.html"><img src="images/lineoff.svg" width="60" height="40" alt="addblock"></a>
+                <img src="images/bar.svg" width="60" height="40" alt="addblock">
+</div>
+
+<div id="barchartContainer"></div>
+              <div class="nav-bar">
+                  <div class="icons-wrapper">
+                    <a href="graph.html"><img src="images/1170668.svg" id="graph" width="50" height="50" alt="graph"></a>
+                    <a href="calendar.html"><img src="images/4430.svg" width="50" height="50" alt="Cal"></a>
+                    <a href="user.html"><img src="images/33308.svg" width="50" height="50" alt="user"></a>
+                  </div>
+              </div>
+        </div>
+   </body>
+    <script src="app.js"></script>
+</html>
+
