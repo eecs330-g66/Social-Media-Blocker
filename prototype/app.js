@@ -141,12 +141,15 @@ function check_login() {
     var pwd_input = document.getElementById('pwd').value;
 
     if(user_input in users){
+        console.log('Hello');
         user_exists = 1;
     } else{
         alert("Entered an invalid username. Try again.");
     }
     if(user_exists && (users[user_input] == pwd_input)){
-        window.location.href = "user.html";
+        console.log('Hello');
+        window.location.replace("user.html");
+        return false;
     }else{
         alert("Invalid Password. Try again.");
     }
