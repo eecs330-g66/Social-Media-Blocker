@@ -11,7 +11,9 @@ var e_day;
 //vars for the login page
 var users = {           //hardcoding 2 users
     "alp" : "password",
-    "varun" : "chicken"
+    "varun" : "chicken",
+    "clarissa" : "hi",
+    "aaron" : "bye"
 };
 
 function init() {
