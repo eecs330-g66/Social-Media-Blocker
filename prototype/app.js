@@ -4,6 +4,7 @@ var length;
 var days = ["mon", "tues", "wed", "thu", "fri", "sat", "sun"]; 
 var st_day;
 var e_day;
+var user_input;
 
 //vars for the login page
 var users = {           //hardcoding 2 users
@@ -12,7 +13,8 @@ var users = {           //hardcoding 2 users
 };
 
 function init() {
-
+    //console.log(user_input);
+    document.getElementById("curr_user").innerHTML = localStorage.getItem('user');
 
 	var start_day = localStorage.getItem('start_day');
 	var start_hour = Number(localStorage.getItem('start_hour'));
@@ -125,8 +127,6 @@ function store() {
 	}
 }
 
-init();
-
 function colorboxes() {
 	document.getElementById(start).style.backgroundColor = '#2196F3';
 	document.getElementById(end).style.backgroundColor = '#2196F3';
@@ -138,6 +138,7 @@ function check_login() {
     var user_exists = 0;
     var password_match = 0;
     var user_input = document.getElementById('user').value.toLowerCase();
+    var user_name = localStorage.setItem('user', document.getElementById('user').value);
     var pwd_input = document.getElementById('pwd').value;
 
     if(user_input in users){
@@ -154,6 +155,8 @@ function check_login() {
         alert("Invalid Password. Try again.");
     }
 }
+
+init();
 
 
 
