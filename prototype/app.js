@@ -5,7 +5,6 @@ var days = ["mon", "tues", "wed", "thu", "fri", "sat", "sun"];
 var st_day;
 var e_day;
 var daily_limit; 
-
 //vars for the login page
 var users = {           //hardcoding 2 users
     "alp" : "password",
@@ -127,6 +126,8 @@ function store() {
 	}
 }
 
+init();
+
 function colorboxes() {
 	document.getElementById(start).style.backgroundColor = '#2196F3';
 	document.getElementById(end).style.backgroundColor = '#2196F3';
@@ -138,7 +139,6 @@ function check_login() {
     var user_exists = 0;
     var password_match = 0;
     var user_input = document.getElementById('user').value.toLowerCase();
-    var user_name = localStorage.setItem('user', document.getElementById('user').value);
     var pwd_input = document.getElementById('pwd').value;
 
     if(user_input in users){
@@ -156,14 +156,11 @@ function check_login() {
     }
 }
 
-init();
-
 
 
 function set_limit() {
     daily_limit = document.getElementById("daily_limit").value; 
     console.log(daily_limit);
-
 
 }
 
