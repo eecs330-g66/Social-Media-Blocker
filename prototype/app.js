@@ -5,6 +5,12 @@ var days = ["mon", "tues", "wed", "thu", "fri", "sat", "sun"];
 var st_day;
 var e_day;
 
+//vars for the login page
+var users = {           //hardcoding 2 users
+    "alp" : "password",
+    "varun" : "chicken"
+};
+
 function init() {
 
 
@@ -101,7 +107,7 @@ function init() {
 } 
                     
 
-
+//Functions for the blocking page
 function store() {
 	//localStorage['length'] = document.getElemntById('end_hour').value - document.getElementById('start_hour').value;
 	if ((document.getElementById('start_day').value + document.getElementById('start_hour').value) == (document.getElementById('end_day').value + document.getElementById('end_hour').value)) {
@@ -126,3 +132,29 @@ function colorboxes() {
 	document.getElementById(end).style.backgroundColor = '#2196F3';
 
 }
+
+
+//Function for the login form page
+function check_login() {
+    var user_exists = 0;
+    var password_match = 0;
+    var user_input = document.getElementById('user').value.toLowerCase();
+    var pwd_input = document.getElementById('pwd').value;
+    if(user_input in users){
+        user_exists = 1;
+    } else{
+        alert("Entered an invalid username. Try again.");
+    }
+
+    if(user_exists && (users[user_input] == pwd_input)){
+        window.location.href = "user.html";
+    }else{
+        alert("Invalid Password. Try again.");
+    }
+}
+
+
+
+
+
+
