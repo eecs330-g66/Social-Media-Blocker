@@ -173,6 +173,13 @@ tr:nth-child(even) {
 
 }
 
+.logoutbutton {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+
+}
+
 .loginbutton {
   position: relative;
   text-align: center;
