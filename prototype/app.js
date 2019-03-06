@@ -16,8 +16,8 @@ var users = {           //hardcoding 2 users
 
 function init() {
     //console.log(user_input);
-    if(window.location == 'user.html') {
-        console.log('Hello');
+    console.log(window.location.href.slice(-9))
+    if(window.location.href.slice(-9) == 'user.html') {
         document.getElementById("curr_user").innerHTML = 'Welcome, ' + localStorage.getItem('user').charAt(0).toUpperCase() + localStorage.getItem('user').slice(1) + '!';
     }
 
