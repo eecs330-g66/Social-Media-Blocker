@@ -161,7 +161,6 @@ function set_limit() {
     daily_limit = document.getElementById("daily_limit").value; 
     console.log(daily_limit);
 
-
 }
 
 
