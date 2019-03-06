@@ -193,7 +193,7 @@ select {
 .timeform {
 	width: 250px;
 	padding-left: 25px;
-	margin-bottom: 30px;
+	margin-bottom: 80px;
 }
 
 h2 {
@@ -314,7 +314,11 @@ input:checked + .slider:before {
   text-align: center;
 }
 
-.title {
+h3 {
   text-align: center;
+  font-size: 24;
+}
+
+.title {
   margin-top: 240px;
 }
