@@ -190,8 +190,8 @@ select {
 }
 
 .timeform {
-	width: 250px;
-	padding-left: 25px;
+	width: 300px;
+  text-align: center;
 	margin-bottom: 80px;
 }
 
