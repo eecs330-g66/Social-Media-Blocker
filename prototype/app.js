@@ -145,7 +145,6 @@ function check_login() {
     } else{
         alert("Entered an invalid username. Try again.");
     }
-
     if(user_exists && (users[user_input] == pwd_input)){
         window.location.href = "user.html";
     }else{
