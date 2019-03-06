@@ -78,6 +78,12 @@ tr:nth-child(even) {
 
 }
 
+.loginbutton {
+  position: relative;
+  text-align: center;
+  margin-top: 200px;
+}
+
 .back-button {
     margin-right: 280px;
     padding: 7.5px;
@@ -210,4 +216,9 @@ input:checked + .slider:before {
 
 .profilepic {
   text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin-top: 240px;
 }
