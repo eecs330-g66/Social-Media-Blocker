@@ -139,6 +139,7 @@ function check_login() {
     var user_exists = 0;
     var password_match = 0;
     var user_input = document.getElementById('user').value.toLowerCase();
+    var user_name = localStorage.setItem('user', user_input)
     var pwd_input = document.getElementById('pwd').value;
 
     if(user_input in users){
