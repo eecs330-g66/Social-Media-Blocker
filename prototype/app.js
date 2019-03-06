@@ -15,8 +15,12 @@ var users = {           //hardcoding 2 users
 
 function init() {
     //console.log(user_input);
-    document.getElementById("curr_user").innerHTML = 'Welcome, ' + localStorage.getItem('user').charAt(0).toUpperCase() + localStorage.getItem('user').slice(1) + '!';
+    if(window.location == 'user.html') {
+        console.log('Hello');
+        document.getElementById("curr_user").innerHTML = 'Welcome, ' + localStorage.getItem('user').charAt(0).toUpperCase() + localStorage.getItem('user').slice(1) + '!';
+    }
 
+    console.log('What');
 	var start_day = localStorage.getItem('start_day');
 	var start_hour = Number(localStorage.getItem('start_hour'));
 	var end_day = localStorage.getItem('end_day');
@@ -141,7 +145,7 @@ function check_login() {
     var user_exists = 0;
     var password_match = 0;
     var user_input = document.getElementById('user').value.toLowerCase();
-    var user_name = localStorage.setItem('user', user_input)
+    var user_name = localStorage.setItem('user', user_input);
     var pwd_input = document.getElementById('pwd').value;
 
     if(user_input in users){
