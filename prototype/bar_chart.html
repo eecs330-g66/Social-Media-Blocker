@@ -8,10 +8,16 @@
         <div id="screen">
           <h1>My Usage</h1>
 <script>
+
+var daily_limit =  5; 
+
+
 window.onload = function () {
+daily_limit = localStorage.getItem('daily_limit');
 
 var chart = new CanvasJS.Chart("barchartContainer", {
 	animationEnabled: true,
+
 	
 	axisX: {
 		interval: 1,
@@ -25,7 +31,10 @@ var chart = new CanvasJS.Chart("barchartContainer", {
                 label: "Daily Limit",
                 labelPlacement:"outside",
                 thickness:4,
-				value: 13,
+                
+				value: daily_limit,
+				  //output from daily limit button will update this screen. 
+				
                 showOnTop: true,
                 
 			}
@@ -120,5 +129,6 @@ function toolTipContent(e) {
               </div>
         </div>
    </body>
+    <script src="app.js"></script>
 </html>
 

@@ -4,13 +4,14 @@ var length;
 var days = ["mon", "tues", "wed", "thu", "fri", "sat", "sun"]; 
 var st_day;
 var e_day;
-var daily_limit; 
+
+
+
+
 //vars for the login page
 var users = {           //hardcoding 2 users
     "alp" : "password",
-    "varun" : "chicken",
-    "clarissa" : "hi",
-    "aaron" : "bye"
+    "varun" : "chicken"
 };
 
 function init() {
@@ -25,6 +26,7 @@ function init() {
 	var start_hour = Number(localStorage.getItem('start_hour'));
 	var end_day = localStorage.getItem('end_day');
 	var end_hour = Number(localStorage.getItem('end_hour'));
+
 
     
 
@@ -163,12 +165,11 @@ function check_login() {
     }
 }
 
-
-
 function set_limit() {
-    daily_limit = document.getElementById("daily_limit").value; 
-    console.log(daily_limit);
 
+    daily_limit = document.getElementById('daily_limit').value;
+    localStorage['daily_limit'] = document.getElementById('daily_limit').value;
+    console.log(daily_limit)
 }
 
 
