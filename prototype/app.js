@@ -6,12 +6,17 @@ var st_day;
 var e_day;
 var users = {           //hardcoding 2 users
     "alp" : "password",
-    "varun" : "chicken"
+    "varun" : "chicken",
+    "clarissa" : "hi",
+    "aaron" : "bye"
 };
 
 function init() {
 
-    document.getElementById("curr_user").innerHTML = 'Welcome, ' + localStorage.getItem('user') + '!';
+
+
+    //console.log(user_input);
+    document.getElementById("curr_user").innerHTML = 'Welcome, ' + localStorage.getItem('user').charAt(0).toUpperCase() + localStorage.getItem('user').slice(1) + '!';
 
     var start_day = localStorage.getItem('start_day');
     var start_hour = Number(localStorage.getItem('start_hour'));
