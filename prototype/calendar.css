@@ -299,7 +299,7 @@ input:checked + .slider:before {
 /*For the data visualization*/
 
 #chartContainer {
-  height: 350px;
+  height: 347px;
   width: 290px;
   position: relative;
   left: 5px; 

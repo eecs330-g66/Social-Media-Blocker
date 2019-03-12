@@ -21,15 +21,16 @@ var chart = new CanvasJS.Chart("barchartContainer", {
 	
 	axisX: {
 		interval: 1,
+    	labelFontSize: 13,
 		intervalType: "day",
         valueFormatString: "DDD"
 	},
 	axisY:{
       stripLines:[
 			{   
-              
+    			labelFontSize: 13,
                 label: "Daily Limit",
-                labelPlacement:"outside",
+                labelPlacement:"inside",
                 thickness:4,
                 
 				value: daily_limit,
