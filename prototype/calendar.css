@@ -319,7 +319,7 @@ input:checked + .slider:before {
 }
 
 #barchartContainer {
-  height: 370px; 
+  height: 350px; 
   max-width: 920px; 
   margin: 0px auto;
 }
