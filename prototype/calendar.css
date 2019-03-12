@@ -299,7 +299,7 @@ input:checked + .slider:before {
 /*For the data visualization*/
 
 #chartContainer {
-  height: 347px;
+  height: 350px;
   width: 290px;
   position: relative;
   left: 5px; 
@@ -311,7 +311,7 @@ input:checked + .slider:before {
 }
 
 #barchartContainer {
-  height: 370px; 
+  height: 350px; 
   max-width: 920px; 
   margin: 0px auto;
 }
