@@ -183,7 +183,6 @@ tr:nth-child(even) {
 .logoutbutton {
   position: relative;
   text-align: center;
-  margin-top: 10px;
 
 }
 
@@ -204,16 +203,19 @@ select {
 }
 
 .timeform {
-  margin-top: 160px;
+  margin-top: -5px;
   height: 150px;
 	width: 300px;
   text-align: center;
-	margin-bottom: 20px;
 }
 
 h2 {
   font-size: 18px;
   /*margin-right: 80px;*/
+}
+
+#set-daily-limit {
+
 }
 
 .switch {
@@ -327,17 +329,12 @@ input:checked + .slider:before {
 }
 
 .profilepic {
-  /*text-align: center;*/
-  margin-top: 30px;
-  margin-left: 25px;
-  float: left;
+  text-align: center;
 }
 
 #curr_user {
+  text-align: center;
   height: 80px;
-  margin-top: 50px;
-  margin-right: 25px;
-  float: right;
 }
 
 
