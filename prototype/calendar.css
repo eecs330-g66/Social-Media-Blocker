@@ -46,11 +46,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color: #659FEA;
 }
 
 .login-header {
-  background: #28d;
+  background: #659FEA;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -95,14 +95,14 @@ body {
 }
 
 .login input[type="submit"] {
-  background: #28d;
+  background: #659FEA;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-  background: #17c;
+  background: #3B86E7;
 }
 
 /* Buttons' focus effect */
@@ -111,10 +111,14 @@ body {
 }
 
 h1 {
+  font-family: Bookman;
+  color: #fff;
+  font-style: italic;
+  font-variant: small-caps;
 	text-align: center;
 	height: 45px;
 	width: 100%;
-	background-color: lightblue;
+	background-color: #659FEA;
 }
 
 /*Calendar Div*/
@@ -146,20 +150,24 @@ tr:nth-child(even) {
 
 /*Bottom Bar for Navigation*/
 .nav-bar {
-	height: 80px;
+	height: 60px;
 	width: 300px;
-	background-color: lightblue;
+	background-color: #659FEA;
 	position: absolute;
   	bottom: 0;
 }
 
 
 .icons-wrapper {
-	margin-top: 15px;
+	margin-top: 10px;
 	margin-left: 25px;
 	width: 300px;
 	display: grid;
     grid-template-columns: auto auto auto;
+}
+
+.icons-wrapper img {
+  height: 40px;
 }
 
 #graph {
