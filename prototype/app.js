@@ -169,6 +169,7 @@ function set_limit() {
 
     daily_limit = document.getElementById('daily_limit').value;
     localStorage['daily_limit'] = document.getElementById('daily_limit').value;
+    document.getElementById('set-daily-limit').innerHTML = 'Daily Limit Set';
     console.log(daily_limit)
 }
 
