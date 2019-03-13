@@ -46,11 +46,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color: #659FEA;
 }
 
 .login-header {
-  background: #28d;
+  background: #659FEA;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -95,14 +95,14 @@ body {
 }
 
 .login input[type="submit"] {
-  background: #28d;
+  background: #659FEA;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-  background: #17c;
+  background: #3B86E7;
 }
 
 /* Buttons' focus effect */
@@ -111,17 +111,20 @@ body {
 }
 
 h1 {
+  color: #fff;
+  font-style: italic;
+  font-variant: small-caps;
 	text-align: center;
 	height: 45px;
 	width: 100%;
-	background-color: lightblue;
+	background-color: #659FEA;
 }
 
 /*Calendar Div*/
 .calendar{
 	margin-right: 10px;
 	margin-left: 10px;
-    height: 300px;
+    height: 330px;
     width: 280px;
     overflow: scroll;
 
@@ -146,20 +149,24 @@ tr:nth-child(even) {
 
 /*Bottom Bar for Navigation*/
 .nav-bar {
-	height: 80px;
+	height: 60px;
 	width: 300px;
-	background-color: lightblue;
+	background-color: #659FEA;
 	position: absolute;
   	bottom: 0;
 }
 
 
 .icons-wrapper {
-	margin-top: 15px;
+	margin-top: 10px;
 	margin-left: 25px;
 	width: 300px;
 	display: grid;
     grid-template-columns: auto auto auto;
+}
+
+.icons-wrapper img {
+  height: 40px;
 }
 
 #graph {
@@ -169,21 +176,26 @@ tr:nth-child(even) {
 .addbutton {
 	position: relative;
 	text-align: center;
-	bottom: -15px;
+	bottom: -20px;
+}
 
+
+.blockbutton {
+  position: relative;
+  text-align: center;
+  bottom: -53px;
 }
 
 .logoutbutton {
   position: relative;
   text-align: center;
-  margin-top: 50px;
-
+  margin-top: 10px;
 }
 
 .loginbutton {
   position: relative;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 230px;
 }
 
 .back-button {
@@ -197,13 +209,25 @@ select {
 }
 
 .timeform {
+  margin-top: -25px;
+  height: 150px;
 	width: 300px;
   text-align: center;
-	margin-bottom: 20px;
+}
+
+.timeform1 {
+  height: 150px;
+  width: 300px;
+  text-align: center;
 }
 
 h2 {
-	margin-bottom: -5px;
+  font-size: 18px;
+  /*margin-right: 80px;*/
+}
+
+#set-daily-limit {
+
 }
 
 .switch {
@@ -311,13 +335,29 @@ input:checked + .slider:before {
 }
 
 #barchartContainer {
-  height: 370px; 
+  height: 350px; 
   max-width: 920px; 
   margin: 0px auto;
 }
 
 .profilepic {
+  padding-top: 25px;
   text-align: center;
+  margin-bottom: -5px;
+}
+
+#curr_user {
+  text-align: center;
+  height: 80px;
+  /*color: white;
+  text-shadow: 1px 1px black;*/
+}
+
+#profile-header {
+  margin-top: -20px;
+  /*background-color: #ededef;*/
+  height: 200px;
+  margin-bottom: 20px;
 }
 
 h3 {

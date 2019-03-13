@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="screen">
-          <h1>My Usage</h1>
+          <h1>usage</h1>
 <script>
 window.onload = function () {
 
@@ -15,15 +15,18 @@ var chart = new CanvasJS.Chart("chartContainer", {
     text: ""
   },
   axisX: {
-    valueFormatString: "DDD"
+    valueFormatString: "DDD",
+    labelFontSize: 13
   },
-  axisY2: {
-    title: "Time (Hours)"
+  axisY: {
+    labelFontSize: 13,
+    interval: 1
   },
   toolTip: {
     shared: true
   },
   legend: {
+    fontSize: 13,
     cursor: "pointer",
     verticalAlign: "top",
     horizontalAlign: "center",
@@ -32,8 +35,9 @@ var chart = new CanvasJS.Chart("chartContainer", {
   },
   data: [{
     type:"line",
+    lineThickness: 4,    
     color: "#46C5E8",
-    axisYType: "secondary",
+    axisYType: "primary",
     name: "Twitter",
     showInLegend: true,
     markerSize: 0,
@@ -50,8 +54,9 @@ var chart = new CanvasJS.Chart("chartContainer", {
   },
   {
     type: "line",
+    lineThickness: 4,    
     color:"#E4405F",
-    axisYType: "secondary",
+    axisYType: "primary",
     name: "Instagram",
     showInLegend: true,
     markerSize: 0,
@@ -68,8 +73,9 @@ var chart = new CanvasJS.Chart("chartContainer", {
   },
   {
     type: "line",
+    lineThickness: 4,    
     color:"#0E15F1",
-    axisYType: "secondary",
+    axisYType: "primary",
     name: "Facebook",
     showInLegend: true,
     markerSize: 0,
