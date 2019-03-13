@@ -189,13 +189,13 @@ tr:nth-child(even) {
 .logoutbutton {
   position: relative;
   text-align: center;
-
+  margin-top: 10px;
 }
 
 .loginbutton {
   position: relative;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 230px;
 }
 
 .back-button {
@@ -209,9 +209,15 @@ select {
 }
 
 .timeform {
-  margin-top: -5px;
+  margin-top: -25px;
   height: 150px;
 	width: 300px;
+  text-align: center;
+}
+
+.timeform1 {
+  height: 150px;
+  width: 300px;
   text-align: center;
 }
 
@@ -335,14 +341,24 @@ input:checked + .slider:before {
 }
 
 .profilepic {
+  padding-top: 25px;
   text-align: center;
+  margin-bottom: -5px;
 }
 
 #curr_user {
   text-align: center;
   height: 80px;
+  /*color: white;
+  text-shadow: 1px 1px black;*/
 }
 
+#profile-header {
+  margin-top: -20px;
+  /*background-color: #ededef;*/
+  height: 200px;
+  margin-bottom: 20px;
+}
 
 h3 {
   text-align: center;
