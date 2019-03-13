@@ -124,7 +124,7 @@ h1 {
 .calendar{
 	margin-right: 10px;
 	margin-left: 10px;
-    height: 300px;
+    height: 330px;
     width: 280px;
     overflow: scroll;
 
@@ -176,8 +176,14 @@ tr:nth-child(even) {
 .addbutton {
 	position: relative;
 	text-align: center;
-	bottom: -15px;
+	bottom: -20px;
+}
 
+
+.blockbutton {
+  position: relative;
+  text-align: center;
+  bottom: -53px;
 }
 
 .logoutbutton {
